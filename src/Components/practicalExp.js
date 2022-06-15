@@ -111,10 +111,10 @@ export default class Practical extends React.Component{
         return (
             <div id="addExpContainer">
                 <h1>Experience</h1>
+                <ExperienceOverview array={this.state.Experiences}/>
                 {this.state.Experiences.length > 0 &&
                     <button className="editButton">Edit</button>
                 }
-                <ExperienceOverview array={this.state.Experiences}/>
                 {show}
             </div>
         )

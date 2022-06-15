@@ -1,7 +1,43 @@
+body,html,#root{
+    margin: 0px;
+    background-color:yellowgreen ;
+}
+button{
+    background-color:coral;
+    width: 60px;
+    height: 40px;
+}
+input{
+    background-color:yellowgreen
+}
+.App{
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(10,10vw);
+    grid-template-rows: repeat(10,10vh);
+}
+#generalInfo{
+    grid-row: 1 / 5;
+    grid-column: 2 / 5;
+}
+#imagePp{
+    grid-row: 1 / 5;
+    grid-column: 6 / 9;
+    height: 250px;
+    width: 250px;
+    margin: 50px;
+}
+#addEduContainer{
+    grid-row: 6 / 9;
+    grid-column: 2 / 5;
+}
+#addExpContainer{
+    grid-row: 6 / 9;
+    grid-column: 6  / 9;
+}
 form{
     display: flex;
     flex-direction: column;
-    width: 200px;
 }
 form *{
     margin: 5px;
@@ -12,34 +48,22 @@ form *{
 .InfoTab:hover > .editButton{
     visibility: visible;
 }
-.educationDiv{
-    border: 1px solid black;
+.educationDiv , .experienceDiv{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border: 1px solid blue;
     display: flex;
     flex-direction: row;
 }
-.educationDiv *{
+.educationDiv * , .experienceDiv *{
     margin: 15px;
 }
-#eduContainer{
+#eduContainer , #expContainer{
     display: flex;
     flex-direction: column;
 }
 #addEduContainer:hover > .editButton{
     visibility: visible;
-}
-
-
-.experienceDiv{
-    border: 1px solid black;
-    display: flex;
-    flex-direction: row;
-}
-.experienceDiv *{
-    margin: 15px;
-}
-#expContainer{
-    display: flex;
-    flex-direction: column;
 }
 #addExpContainer:hover > .editButton{
     visibility: visible;

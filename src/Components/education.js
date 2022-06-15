@@ -103,10 +103,10 @@ export default class Education extends React.Component{
         return (
             <div id="addEduContainer">
                 <h1>Education</h1>
+                <EducationOverview edit={this.state.Edit} array={this.state.Educations}/>
                 {this.state.Educations.length > 0 &&
                     <button onClick={this.editMode} className="editButton">Edit</button>
-                }
-                <EducationOverview edit={this.state.Edit} array={this.state.Educations}/>                
+                }               
                 {show}
             </div>
         )

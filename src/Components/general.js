@@ -98,12 +98,12 @@ export default class GeneralInfo extends React.Component{
         let show;
         if(isSubmit){
             show = <div className="InfoTab">
-                        <button className="editButton" onClick={this.onClick}>Edit</button>
                         <p> Name: {this.state.inputs.Name}</p>
                         <p> Last Name : {this.state.inputs.LastName}</p>
                         <p> Title: {this.state.inputs.Title}</p>
                         <p> E-mail: {this.state.inputs.Email}</p>
                         <p> Phone Number: {this.state.inputs.Phone}</p>
+                        <button className="editButton" onClick={this.onClick}>Edit</button>
                     </div>
             }
         else{
@@ -119,7 +119,7 @@ export default class GeneralInfo extends React.Component{
 
 
        return (
-        <div>
+        <div id="generalInfo">
             <h1>General Info</h1>
             {show}
         </div>
