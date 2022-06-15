@@ -1,13 +1,46 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+form{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+form *{
+    margin: 5px;
+}
+.editButton{
+    visibility: hidden;
+}
+.InfoTab:hover > .editButton{
+    visibility: visible;
+}
+.educationDiv{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+.educationDiv *{
+    margin: 15px;
+}
+#eduContainer{
+    display: flex;
+    flex-direction: column;
+}
+#addEduContainer:hover > .editButton{
+    visibility: visible;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.experienceDiv{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+.experienceDiv *{
+    margin: 15px;
+}
+#expContainer{
+    display: flex;
+    flex-direction: column;
+}
+#addExpContainer:hover > .editButton{
+    visibility: visible;
 }
