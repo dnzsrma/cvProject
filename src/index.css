@@ -1,11 +1,23 @@
+
 body,html,#root{
     margin: 0px;
-    background-color:yellowgreen ;
+    background-color:black ;
+}
+#root{
+    box-shadow: 20px 20px 20px 50px gray;
+    background-color: gray;
+    width: 80vw;
+    height: 100vh;
+    overflow: auto;
+    max-height: 500vh;
+    left: 10vw;
+    position:absolute;
 }
 button{
-    background-color:coral;
+    background-color:black;
     width: 60px;
     height: 40px;
+    color: white;
 }
 input{
     background-color:yellowgreen
@@ -52,8 +64,9 @@ form *{
     margin-top: 3px;
     margin-bottom: 3px;
     border: 1px solid blue;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,50px) ;
+    grid-template-rows: repeat(auto-fill,50px);
 }
 .educationDiv * , .experienceDiv *{
     margin: 15px;
@@ -67,4 +80,20 @@ form *{
 }
 #addExpContainer:hover > .editButton{
     visibility: visible;
+}
+.littlep{
+    font-size: 0.75rem;
+    grid-row: 4 / 5;
+    grid-column: 1 / -1;
+}
+.bigp{
+    font-size: 1.5rem;
+    grid-row: 1 / 3;
+    grid-column: 1 / -1;
+
+}
+.medp{
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+    font-size: 0.8rem;
 }

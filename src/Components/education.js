@@ -13,15 +13,14 @@ export default class Education extends React.Component{
                 Key : 1,
             },
             pressed : false,
-            Educations: [],
-            Edit : false
+            Educations: []
         }
         this.onSubmit = this.onSubmit.bind(this);
         this.handleSchoolNameChange = this.handleSchoolNameChange.bind(this);
         this.handleTitleChange = this.handleTitleChange.bind(this);
         this.handleDateChange = this.handleDateChange.bind(this);
         this.onClick = this.onClick.bind(this);
-        this.editMode = this.editMode.bind(this);
+        this.deleteAll = this.deleteAll.bind(this);
     }
 
     handleSchoolNameChange = (e) => {
@@ -74,11 +73,11 @@ export default class Education extends React.Component{
             pressed : true
         })
     }
-    editMode = () =>
+    deleteAll = () =>
     {
         this.setState(
             {
-                Edit : true
+                Educations : []
             }
         )
     }
@@ -105,7 +104,7 @@ export default class Education extends React.Component{
                 <h1>Education</h1>
                 <EducationOverview edit={this.state.Edit} array={this.state.Educations}/>
                 {this.state.Educations.length > 0 &&
-                    <button onClick={this.editMode} className="editButton">Edit</button>
+                    <button onClick={this.deleteAll} className="editButton">Clean</button>
                 }               
                 {show}
             </div>

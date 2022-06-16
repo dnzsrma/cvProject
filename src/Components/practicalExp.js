@@ -22,6 +22,7 @@ export default class Practical extends React.Component{
         this.handleDateFromChange = this.handleDateFromChange.bind(this);
         this.handleDateUntilChange = this.handleDateUntilChange.bind(this);
         this.onClick = this.onClick.bind(this);
+        this.deleteAll = this.deleteAll.bind(this);
     }   
     onClick = () =>
     {
@@ -89,6 +90,14 @@ export default class Practical extends React.Component{
         console.log(this.state.Experiences)
       };
 
+      deleteAll = () =>
+      {
+          this.setState(
+              {
+                  Experiences : []
+              }
+          )
+      }
 
     render(){
         const isPressed = this.state.pressed;
@@ -113,7 +122,7 @@ export default class Practical extends React.Component{
                 <h1>Experience</h1>
                 <ExperienceOverview array={this.state.Experiences}/>
                 {this.state.Experiences.length > 0 &&
-                    <button className="editButton">Edit</button>
+                    <button onClick={this.deleteAll} className="editButton">Clean</button>
                 }
                 {show}
             </div>

@@ -9,9 +9,9 @@ export default class EducationOverview extends React.Component{
             this.props.array.map((edu) => {
                 return (
                     <div className="educationDiv" key = {edu.Key}>
-                        <p> School : {edu.SchoolName}</p>
-                        <p> Title Of Study : {edu.TitleOfStudy}</p>
-                        <p> Date Of Study: {edu.DateOfStudy}</p>
+                        <p>{edu.SchoolName}</p>
+                        <p className="littlep"> {edu.TitleOfStudy}</p>
+                        <p>{edu.DateOfStudy}</p>
                     </div>
                 )
             })
@@ -21,9 +21,9 @@ export default class EducationOverview extends React.Component{
             this.props.array.map((edu) => {
                 return (
                     <div className="educationDiv" key = {edu.Key}>
-                        <p> School : {edu.SchoolName}</p>
-                        <p> Title Of Study : {edu.TitleOfStudy}</p>
-                        <p> Date Of Study: {edu.DateOfStudy}</p>
+                        <p className="bigp">{edu.SchoolName}</p>
+                        <p className="medp"> {edu.TitleOfStudy}</p>
+                        <p className="littlep">{edu.DateOfStudy}</p>
                     </div>
                 )
             })
